@@ -1,0 +1,44 @@
+# -*- coding: utf-8 -*-
+#from ReferenceModel import compositionBeta
+#import ReferenceModel
+#import cplex
+def band_allocation():
+  global BigCor
+  global compositionBeta
+  global cpx, SmallCor, APCor, length, rbs, space, rap
+  path = '../extensiveform/band_solution.txt'
+  fo = open(path, "w")
+  fo.write('\n\nThe following information is regarding bandwidth allocation to each station.\n')
+  for i in range(len(compositionBeta)):
+    for j in range(len(compositionBeta[i])):
+      if i == 0:
+	fo.write(str(cpx.solution.get_values(compositionBeta[i][j]))+" "+str(BigCor[j][0])+" "+str(BigCor[j][1])+" "+str(length+25)+" Macrocell_"+str(j)+"\n")
+	if j == macro - 1:
+	  fo.write('\n\n')
+      elif i == 1:
+	fo.write(str(cpx.solution.get_values(compositionBeta[i][j]))+" "+str(SmallCor[j][0])+" "+str(SmallCor[j][1])+" "+str(rbs/space)+" Macrocell_"+str(j)+"\n")
+	if j == small - 1:
+	  fo.write('\n\n')
+      elif i == 2:
+	fo.write(str(cpx.solution.get_values(compositionBeta[i][j]))+" "+str(APCor[j][0])+" "+str(APCor[j][1])+" "+str(rap/space)+" Macrocell_"+str(j)+"\n")
+	if j == ap - 1:
+	  fo.write('\n\n')
+	  
+  fo.write('#The following is the input to gnuplot to generate a figure of channel allocation.\n')
+  fo.write('#plot \''+path+'\' index 0:0 using 2:3:1 notitle with labels, \''+path+'\' index 0:0 using 2:3:1 notitle with labels, \''+path+'\' index 0:0 using 2:3:1 notitle with labels, ')
+  
+  f.write('\''+path+'\' index 0:0 using 2:3:4 title \'Macrocells\' with circles lc rgb \'#ccffcc\' fs transparent solid 0.4 border rgb \'black\', \''+path+'\' index 1:1 using 2:3:4 title \'Small cells\' with circles lc 2 lw 0.4, \''+path+'\' index 2:2 using 2:3:4 title \'Hot Spots\' with circles lc 5 lw 0.4, \''+path+'\' index 0:0 using 2:3 title \'Macrocell BSs\' with points lc 0, \''+path+'\' index 1:1 using 2:3 title \'Small cell BSs\' with points lc 8 ps 0.6, \''+path+'\' index 2:2 using 2:3 title \'APs\' with points lc 4 ps 0.6 pt 3\n')
+   
+  #f.write('\''+path+'\' index 0:0 using 2:3 title \'Macrocell BSs\' with points lc 0, \''+path+'\' index 1:1 using 2:3 title \'Small cell BSs\' with points lc 8 ps 0.6, \''+path+'\' index 2:2 using 2:3 title \'APs\' with points lc 4 ps 0.6 pt 3\n')
+  
+  
+  f.write('set size square\nset xrange[-50:2150]\nset yrange[-50:2150]\nset object 1 rectangle from graph 0,0 to graph 1,1 fillcolor rgb"#FFFFE0" behind\nset grid\nset key box\nset key opaque')
+  
+  #for i in range(len(compositionDelta)):
+    fo.write('Scenario '+str(i))
+    #for j in range(len(compositionDelta[i])):
+      #for k in range(len(compositionDelta[i][j])):
+	#for l in range(len(compositionDelta[i][j][k][l])):
+	  
+  fo.close()
+  return

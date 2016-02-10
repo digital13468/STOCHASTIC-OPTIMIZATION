@@ -1,0 +1,116 @@
+{
+    "Problem": [
+        {
+            "Lower bound": 9177.8400000000001, 
+            "Name": "tmpbwLlo8", 
+            "Number of constraints": 31, 
+            "Number of nonzeros": 150, 
+            "Number of objectives": 1, 
+            "Number of variables": 36, 
+            "Sense": "minimize", 
+            "Upper bound": 9177.8400000000001
+        }
+    ], 
+    "Solution": [
+        {
+            "number of solutions": 1, 
+            "number of solutions displayed": 1
+        }, 
+        {
+            "Constraint": "No nonzero values", 
+            "Gap": 0.0, 
+            "Objective": {
+                "MinCost": {
+                    "Id": 0, 
+                    "Value": 9177.8400000000001
+                }
+            }, 
+            "Status": "optimal", 
+            "Variable": {
+                "FirstStageCost": {
+                    "Id": 0, 
+                    "Value": 8400.0
+                }, 
+                "OTScenario[Scenario1,MonOT]": {
+                    "Id": 26, 
+                    "Value": 20.0
+                }, 
+                "OTScenario[Scenario1,SatOT]": {
+                    "Id": 5, 
+                    "Value": 10.0
+                }, 
+                "OTScenario[Scenario2,MonOT]": {
+                    "Id": 27, 
+                    "Value": 20.0
+                }, 
+                "OTScenario[Scenario2,SatOT]": {
+                    "Id": 6, 
+                    "Value": 10.0
+                }, 
+                "OTScenario[Scenario2,SunOT]": {
+                    "Id": 17, 
+                    "Value": 20.0
+                }, 
+                "OTScenario[Scenario3,MonOT]": {
+                    "Id": 28, 
+                    "Value": 10.0
+                }, 
+                "OTScenario[Scenario3,SatOT]": {
+                    "Id": 7, 
+                    "Value": 10.0
+                }, 
+                "OTScenario[Scenario3,SunOT]": {
+                    "Id": 18, 
+                    "Value": 10.0
+                }, 
+                "OTScenario[Scenario4,MonOT]": {
+                    "Id": 29, 
+                    "Value": 10.0
+                }, 
+                "OTScenario[Scenario4,SunOT]": {
+                    "Id": 19, 
+                    "Value": 10.0
+                }, 
+                "OTScenario[Scenario5,MonOT]": {
+                    "Id": 30, 
+                    "Value": 10.0
+                }, 
+                "SecondStageCost": {
+                    "Id": 1, 
+                    "Value": 777.84000000000003
+                }, 
+                "ShiftDay[Mon]": {
+                    "Id": 25, 
+                    "Value": 2.0
+                }, 
+                "ShiftDay[SatMon]": {
+                    "Id": 2, 
+                    "Value": 4.0
+                }, 
+                "ShiftDay[SatSun]": {
+                    "Id": 3, 
+                    "Value": 5.0
+                }, 
+                "ShiftDay[SunMon]": {
+                    "Id": 15, 
+                    "Value": 4.0
+                }
+            }
+        }
+    ], 
+    "Solver": [
+        {
+            "Error rc": 0, 
+            "Statistics": {
+                "Branch and bound": {
+                    "Number of bounded subproblems": 0, 
+                    "Number of created subproblems": 0
+                }
+            }, 
+            "Status": "ok", 
+            "Termination condition": "optimal", 
+            "Termination message": "MIP - Integer optimal solution\\x3a Objective = 9.1778400000e+03", 
+            "User time": 0.059999999999999998
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+set Shifts:=
+Sat
+Sun
+Mon
+SatSun
+SatMon
+SunMon;
+
+set Overtime:=
+Sat
+Sun
+Mon;
+
+set Scenarios:=
+Scenario1
+Scenario2
+Scenario3
+Scenario4
+Scenario5
+Scenario6
+Scenario7
+Scenario8
+Scenario9;
+
+param DailyCost:=
+Sat 300
+Sun 300
+Mon 300
+SatSun 600
+SatMon 600
+SunMon 600;
+
+param Demand:=
+Sat 90
+Sun 90
+Mon 106.67;
+
+param CoverPatient:=
+Sat 10
+Sun 10
+Mon 10
+SatSun 10
+SatMon 10
+SunMon 10;
+
+param OTCost:=
+Sat 50
+Sun 50
+Mon 50;

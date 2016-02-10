@@ -1,0 +1,68 @@
+{
+    "Problem": [
+        {
+            "Lower bound": 8700.0, 
+            "Name": "tmpjEWNUU", 
+            "Number of constraints": 7, 
+            "Number of nonzeros": 30, 
+            "Number of objectives": 1, 
+            "Number of variables": 12, 
+            "Sense": "minimize", 
+            "Upper bound": 8700.0
+        }
+    ], 
+    "Solution": [
+        {
+            "number of solutions": 1, 
+            "number of solutions displayed": 1
+        }, 
+        {
+            "Constraint": "No nonzero values", 
+            "Gap": 0.0, 
+            "Objective": {
+                "MinCost": {
+                    "Id": 0, 
+                    "Value": 8700.0
+                }
+            }, 
+            "Status": "optimal", 
+            "Variable": {
+                "FirstStageCost": {
+                    "Id": 0, 
+                    "Value": 8700.0
+                }, 
+                "ShiftDay[SatMon]": {
+                    "Id": 4, 
+                    "Value": 6.0
+                }, 
+                "ShiftDay[SatSun]": {
+                    "Id": 5, 
+                    "Value": 3.0
+                }, 
+                "ShiftDay[SunMon]": {
+                    "Id": 7, 
+                    "Value": 5.0
+                }, 
+                "ShiftDay[Sun]": {
+                    "Id": 6, 
+                    "Value": 1.0
+                }
+            }
+        }
+    ], 
+    "Solver": [
+        {
+            "Error rc": 0, 
+            "Statistics": {
+                "Branch and bound": {
+                    "Number of bounded subproblems": 0, 
+                    "Number of created subproblems": 0
+                }
+            }, 
+            "Status": "ok", 
+            "Termination condition": "optimal", 
+            "Termination message": "MIP - Integer optimal solution\\x3a Objective = 8.7000000000e+03", 
+            "User time": 0.01
+        }
+    ]
+}
